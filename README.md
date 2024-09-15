@@ -1,0 +1,4 @@
+#Steps need to follow
+- In the `info.txt` file, first line represents from which row onwards post processing needs to be started. Second row represent the file path of the raw_test.csv(any name could be, just file without post-processing) file, and thid line represents the file path of hte `post-processed.csv` file.
+- Intial when you will keep `post-processed.csv` file then in bare minimum requirements, column names should be there.
+- Run the `my_sanity_check.py` file, and it will automatically do all the things, until unknown unit is not found, if unknown unit is found, then you have to determine, if that units corrected version is presented in the allowed constants (i.e grams corrected version is gram) so add that into the `wrong_true_dict`(in my_sanity_check.py) file, and if you are sure that unit's corrected version can not be found from allowed_constants (i.e packats) then add `null` as a value with that key in `wrong_true_dict`.
