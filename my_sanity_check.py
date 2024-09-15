@@ -53,6 +53,7 @@ wrong_true_dict = {
     'ml': 'millilitre',
     'millimeters': 'millilitre',
     'meters': 'metre',
+    'meter': 'metre',
     'V': 'volt',
     'v': 'volt',
     'volts': 'volt',
@@ -81,7 +82,20 @@ wrong_true_dict = {
     'RPM': 'null',
     'gallons': 'gallon',
     'BTU': 'null',
-    'packs': 'null'
+    'packs': 'null',
+    'mL': 'millilitre',
+    'cents': 'centimetre',
+    'D': 'null',
+    'rpm': 'null',
+    'lumens': 'null',
+    'th': 'null',
+    'person': 'null',
+    'series': 'null',
+    'bars': 'null',
+    'bottles': 'null',
+    'pieces': 'null',
+    'is': 'null',
+    'd': 'null'
 }
 
 
@@ -167,7 +181,7 @@ for i, record in output_df.iloc[start_index:].iterrows():
 
         # Check if the rectified unit is in allowed_units
         if unit not in allowed_units:
-            raise ValueError(f"Invalid unit [{unit}] found in {s_stripped} at index {index}. Allowed units: {allowed_units}")
+            raise ValueError(f"Invalid unit [{unit}] found in {s_stripped} at index {index}, and image_link is {image_link}. Allowed units: {allowed_units}")
         
         # Append valid data to the list
         collected_data.append({
